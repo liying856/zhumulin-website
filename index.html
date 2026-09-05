@@ -642,9 +642,6 @@
     <div class="wrap">
       <h1>安澜的 AI 作品集</h1>
       <p class="tagline">起点低没关系，我一直在往上走。我是安澜，北辰青年「打造个人 AI 操作系统」线上实习学员。这份作品集，记录我四周里用 AI 学习、实践与判断的真实过程。</p>
-      <!-- 背景音乐提示已移除（版权原因）
-      <span id="bgm-hint" class="bgm-hint">♪ 轻触屏幕任意处，播放《氤氲之森》</span>
-      -->
     </div>
   </header>
 
@@ -1441,36 +1438,6 @@
   },{passive:true});
 })();
 </script>
-<!-- 背景音乐《氤氲之森》+ 悬浮黑胶唱片 -->
-<!-- 背景音乐已移除（版权原因，未上传 mp3）
-<audio id="bgm" src="bgm-yinyunzhisen.mp3" loop preload="auto"></audio>
-<button id="vinyl" class="vinyl" type="button" title="播放 / 暂停《氤氲之森》" aria-label="播放或暂停背景音乐">
-  <span class="vinyl-disc"></span>
-</button>
--->
-<script>
-(function(){
-  var a=document.getElementById('bgm'), b=document.getElementById('vinyl');
-  if(!a||!b) return;
-  a.volume=0.55;
-  function play(){
-    var p=a.play();
-    if(p&&p.catch) p.catch(function(){});
-  }
-  b.addEventListener('click',function(e){
-    e.stopPropagation();
-    if(a.paused) play(); else a.pause();
-  });
-  a.addEventListener('play',function(){ b.classList.add('playing'); var h=document.getElementById('bgm-hint'); if(h) h.classList.add('hide'); });
-  a.addEventListener('pause',function(){ b.classList.remove('playing'); });
-  play();
-  ['click','touchstart','scroll','keydown','pointerdown'].forEach(function(ev){
-    document.addEventListener(ev,function once(){
-      if(a.paused) play();
-      document.removeEventListener(ev,once);
-    },{once:true,passive:true});
-  });
-})();
-</script>
+<!-- 背景音乐已移除（开源仓库，避免侵权） -->
 </body>
 </html>
